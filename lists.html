@@ -108,15 +108,88 @@
             <li>Have breakfast</li>
         </ol>
         <div>
-            <h2>DISCRIPTION LIST</h2>
+            <h2>DESCRIPTION LIST</h2>
             <dl>
-            <dt>HTML</dt>
-            <dd>Hypertext Markup language</dd>
-            <dt>CSS</dt>
-            <dd>Used for styling web pages</dd>
+                <dt>HTML</dt>
+                <dd>Hypertext Markup language</dd>
+                <dt>CSS</dt>
+                <dd>Used for styling web pages</dd>
             </dl>
-            
+
         </div>
-</body>
+        <h2>NESTED LIST</h2>
+        <div>
+             <ul>
+            <li>Fruits
+                <ul>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Mango</li>
+                </ul>
+            </li>
+            <li>Vegetables
+                <ul>
+                    <li>Carrot</li>
+                    <li>Broccoli</li>
+                    <li>Spinach</li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        <div>
+            <ol>
+                <li>Fruits</li>
+                <ol>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Mango</li>
+                </ol>
+                <li>Vegetables</li>
+                <ol>
+                    <li>Carrot</li>
+                    <li>Broccoli</li>
+                    <li>Spinach</li>
+                    <li>Capsicum</li>
+                    <ul type="none">
+                        <li>Green Capsicum</li>
+                        <li>Red Capsicum</li>
+                        <li>Yellow Capsicum</li>
+                    </ul>
+                </ol>
+                      
+            </ol>
+                
+        </div>
+        <div>
+            <ol type="I">
+                <li>List item 1</li>
+                <ol type="a">
+                    <li>Nested item 1.1</li>
+                    <li>Nested item 1.2</li>
+                </ol>
+                <li>List item 2</li>
+                <ol >
+                    <li>Nested item 2.1</li>
+                    <li>Nested item 2.2</li>
+                    <ul type="circle">
+                        <li>Nested item 2.2.1</li>
+                        <li>Nested item 2.2.2</li>
+                          <ul type="disc">
+                            <li>Nested item 2.2.2.1</li>
+                            <li>Nested item 2.2.2.2</li>
+                          </ul>
+                         <li>Nested item 2.2.3</li>
+                    </ul>
+                    <li>Nested item 2.3</li>
+                </ol>
+                <li>List item 3</li>
+                <ul type="disc">
+                    <li>Nested item 3.1</li>
+                    <li>Nested item 3.2</li>
+                    <li>Nested item 3.3</li>
+                </ul>
+            </ol>
+        </div>
+    </body>
 
 </html>
