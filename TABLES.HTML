@@ -7,8 +7,9 @@
     <style>
       table,
       tr,
-      td {
-        border: 1px solid black;
+      td,
+      th {
+        border: 2px solid rgba(0, 0, 0, 0.389);
         border-collapse: collapse;
       }
     </style>
@@ -16,41 +17,85 @@
   <body>
     <div>
       <h1>TABLES</h1>
-      <table style="background-color: lightgray;">
-        <tr>
-          <td>Student</td>
-          <td>Maths</td>
-          <td>English</td>
-          <td>Science</td>
-          <td>History</td>
-        </tr>
-        <tr>
-          <td>Ruhani</td>
-          <td>100</td>
-          <td>99</td>
-          <td>98</td>
-          <td>97</td>
-        </tr>
-        <tr>
-          <td>Swati</td>
-          <td>95</td>
-          <td>94</td>
-          <td>93</td>
-          <td>92</td>
-        </tr>
-        <tr>
+      <table style="background-color: lightgray">
+        <thead style="background-color: lightblue">
+          <tr>
+            <th>Student</th>
+            <th>Maths</th>
+            <th>English</th>
+            <th>Science</th>
+            <th>History</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ruhani</td>
+            <td>100</td>
+            <td>99</td>
+            <td>98</td>
+            <td>97</td>
+          </tr>
+          <tr>
+            <td>Swati</td>
+            <td>95</td>
+            <td>94</td>
+            <td>93</td>
+            <td>92</td>
+          </tr>
+          <tr>
             <td>Naina</td>
             <td>84</td>
             <td>83</td>
             <td>82</td>
             <td>81</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Ritika</td>
             <td>79</td>
             <td>78</td>
             <td>99</td>
             <td>77</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <th>Total</th>
+          <th>389</th>
+          <th>375</th>
+          <th>365</th>
+          <th>329</th>
+        </tfoot>
+        <caption>
+          This is a table showing marks of students in different subjects
+        </caption>
+      </table>
+    </div>
+    <div>
+      <h2>Rowspan and colspan</h2>
+      <!-- colspan is used to merge cells horizontally(left-right) and rowspan is used to merge cells vertically(top-bottom) -->
+      <caption>
+        A TABLE WITH MERGE CELLS
+      </caption>
+      <table>
+        <tr>
+          <td rowspan="2"></td>
+          <th colspan="2" style="text-align: center;">Average</th>
+          <th rowspan="2">Red eyes</th>
+        </tr>
+        <tr>
+          <th>height</th>
+          <th>weight</th>
+        </tr>
+        <tr>
+          <th>Males</th>
+          <td>1.9</td>
+          <td>0.003</td>
+          <td>40%</td>
+        </tr>
+        <tr>
+          <th>Females</th>
+          <td>1.8</td>
+          <td>0.002</td>
+          <td>35%</td>
         </tr>
       </table>
     </div>
