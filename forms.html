@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMS</title>
+  </head>
+
+  <body>
+    <h1>FORMS</h1>
+    <div>
+      <form action="formsubmitted.html" target="_blank">
+        <!-- The action attribute specifies where the browser should send the form data when the user submits the form. -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <br>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+          <br />
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" />
+          <br />
+          <br />
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+          <br />
+          <br />
+          <!-- id and label should match so that label will get connected to the input and when we click on label
+         it will redirect us to the input box-->
+          <label for="checkbox">Are you 18+?</label>
+          <input type="checkbox" id="checkbox" />
+          <br />
+          <br />
+          <label for="Phonenumber">Phone Number:</label>
+          <input
+            type="tel"
+            id="Phonenumber"
+            placeholder="Enter your phone number"
+            minlength="10"
+            maxlength="10"
+          />
+          <br />
+          <br />
+          <label for="date">Date of Birth:</label>
+          <input type="date" id="date" />
+          <br />
+          <br />
+          <label for="color">Favorite Color:</label>
+          <input type="color" id="color" />
+          <br />
+          <br />
+          <label for="range">Select a range:</label>
+          <input type="range" id="range" min="0" max="100" />
+          <br />
+          <br />
+          <label for="file">Upload a file:</label>
+          <input type="file" id="file" />
+          <br />
+          <br />
+          <label for="gender">Gender:</label>
+          <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          <br />
+          <br />
+          <label for="city">SELECT YOUR CITY</label>
+          <select name="city" id="city">
+            <option value="meerut">MEERUT</option>
+            <option value="delhi" selected>DELHI</option>
+            <option value="jaipur">JAIPUR</option>
+            <option value="hisar">HISAR</option>
+            <option value="bombay">BOMBAY</option>
+            <option value="vadodra">VADODRA</option>
+          </select>
+          <br />
+          <br />
+          <label for="genderr">GENDER </label>
+          <input type="radio" name="gender" value="male" /> Male
+          <input type="radio" name="gender" value="female" /> Female
+          <input type="radio" name="gender" value="other" /> Other
+          <!-- Because all three radio buttons share the same name="gender", the browser treats them as one group. 
+         Normally, the user can select only one option from that group. -->
+          <br />
+          <br />
+          <label
+            for="male
+        "
+            >GENDER:</label
+          >
+          <label for="male">MALE</label>
+          <input type="radio" name="gender" id="male" />
+          <label for="female">FEMALE</label>
+          <input type="radio" name="gender" id="female" />
+          <br />
+          <br />
+          <!-- The difference b/w the upper 2 is the use of label tag -->
+          <label for="submit">Submit:</label>
+          <input type="submit" id="submit" value="submit" />
+          <br />
+          <br />
+          <label for="reset">Reset:</label>
+          <input type="reset" id="reset" value="Reset" />
+          <br />
+          <br />
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
