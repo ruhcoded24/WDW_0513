@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation Form</title>
+</head>
+<body>
+
+    <!-- action = where to send data, method = how to send it -->
+    <form action="submit.php" method="post">
+
+        <!-- required: cannot be empty -->
+        <p>
+            <input type="text" placeholder="Full name" required>
+        </p>
+
+        <!-- type="email": must contain @ -->
+        <p>
+            <input type="email" placeholder="you@college.edu" required>
+        </p>
+
+        <!-- pattern: exactly 10 digits. title is the message shown -->
+        <p>
+            <input type="text" placeholder="10-digit mobile" required
+                   pattern="[0-9]{10}" title="Enter exactly 10 digits">
+        </p>
+
+        <!-- minlength: at least 6 characters -->
+        <p>
+            <input type="password" placeholder="Min 6 characters" required
+                   minlength="6">
+        </p>
+
+        <!-- min and max: age must be from 17 to 30 -->
+        <p>
+            <input type="number" placeholder="Age (17-30)" required
+                   min="17" max="30">
+        </p>
+
+        <button type="submit">Register</button>
+
+    </form>
+</body>
+</html>
