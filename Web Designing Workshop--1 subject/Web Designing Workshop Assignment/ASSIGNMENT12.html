@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marks Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #555555;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>Student Marks</caption>
+
+        <thead>
+            <tr>
+                <th>Roll</th>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Priyani</td>
+                <td>100</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>dustin</td>
+                <td>88</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <!-- colspan="2": this cell is as wide as 2 columns -->
+                <td colspan="2">Average</td>
+                <td>94</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</body>
+</html>

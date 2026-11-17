@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessible Page</title>
+</head>
+<body>
+
+    <!-- Skip link: keyboard users can jump straight to the main content -->
+    <a href="#main">Skip to main content</a>
+
+    <!-- aria-label tells screen readers what this navigation is -->
+    <nav aria-label="Main menu">
+        <a href="#">Home</a>
+        <a href="#">Help</a>
+    </nav>
+
+    <h1>Accessible Page</h1>
+
+    <main id="main">
+
+        <!-- alt text describes the image for screen readers -->
+        <img src="https://dfhe5ze0n4pxu.cloudfront.net/College/Image/Image-1771053852060.jpeg"
+             alt="Campus banner" width="275" height="200">
+
+        <!-- aria-label is needed because the button only shows X -->
+        <button aria-label="Close">X</button>
+
+        <p>
+            <label for="search">Search:</label>
+            <input type="text" id="search">
+        </p>
+
+    </main>
+</body>
+</html>

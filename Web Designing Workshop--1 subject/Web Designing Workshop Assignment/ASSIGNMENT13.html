@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timetable</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #555555;
+            padding: 10px 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption><b>Weekly Timetable</b></caption>
+
+        <tr>
+            <th>Day</th>
+            <th>9-10</th>
+            <th>10-11</th>
+            <th>11-12</th>
+        </tr>
+
+        <tr>
+            <td>Mon</td>
+            <td>Maths</td>
+            <td>HTML</td>
+            <!-- rowspan="2": this cell is as tall as 2 rows -->
+            <td rowspan="2">Web Lab</td>
+        </tr>
+
+        <tr>
+            <td>Tue</td>
+            <td>DBMS</td>
+            <td>OS</td>
+        </tr>
+
+        <tr>
+            <td>Wed</td>
+            <!-- colspan="3": this cell is as wide as 3 columns -->
+            <td colspan="3">Seminar</td>
+        </tr>
+
+    </table>
+</body>
+</html>

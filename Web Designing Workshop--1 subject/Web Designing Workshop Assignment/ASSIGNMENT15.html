@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Form</title>
+</head>
+<body>
+
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </p>
+
+            <p>
+                <label for="pass">Password:</label>
+                <input type="password" id="pass">
+            </p>
+
+            <!-- Radio buttons with the same name: only one can be selected -->
+            <p>
+                Gender:
+                <label>
+                    <input type="radio" name="gender" value="male">Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="female">Female
+                </label>
+            </p>
+
+            <!-- Checkboxes: many can be selected -->
+            <p>
+                Hobbies:
+                <label>
+                    <input type="checkbox" name="hobby">Reading
+                </label>
+
+                <label>
+                    <input type="checkbox" name="hobby">Coding
+                </label>
+            </p>
+
+            <p>
+                <label for="dob">DOB:</label>
+                <input type="date" id="dob">
+            </p>
+
+        </fieldset>
+    </form>
+</body>
+</html>
