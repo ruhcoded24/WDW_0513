@@ -1,9 +1,83 @@
-div{
-    color: brown;
-}
-h3{
+ div{
+    color: rgba(9, 1, 11, 0.736);
+ }
+h3{ 
     color: rgb(69, 69, 81);
 }
-h4{
+h4{ 
      color: rgb(69, 69, 81);
 }
+ .selector{
+    color: rgba(151, 20, 125, 0.773);
+}
+.class{
+    background-color: rgb(10, 244, 217);
+}
+ #internalCSS{ 
+    color: rgb(225, 20, 20);
+} */
+/* Universal Selector */
+ /* *{
+    color: rgb(118, 3, 3);
+}  */
+/* Descendant Combinator    */   
+div p {
+    color: rgb(44, 14, 178);
+}
+ /* Child Combinator */
+ div > p {
+    color: rgb(44, 14, 178);    
+ }
+ /* Adjacent Sibling Combinator */
+ a+p {
+    color: rgb(220, 112, 17);
+    }
+ /* General Sibling Combinator */
+    a~p {
+    color: rgb(20, 17, 220);
+    }
+    h6:hover{
+        color: rgb(169, 11, 11);
+        background-color: rgb(11, 169, 11);
+    }
+    .hover-effect:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+    }
+    /* Pseudo-classes */
+    .selector:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(126, 25, 25);
+    }
+    .selector:active {
+        color: rgb(255, 255, 255);
+        background-color: rgb(25, 126, 25);
+    }
+    .selector:focus {
+        color: rgb(255, 255, 255);
+        background-color: rgb(25, 25, 126);
+    }
+    .selector:visited {
+        color: rgb(255, 255, 255);
+        background-color: rgb(126, 126, 25);
+    }
+    /* Pseudo-elements */
+    .learn::after {
+        content: " (This is a pseudo-element)";
+        color: rgb(255, 0, 0);
+    }
+    .learn::before {
+        content: "before: ";
+        color: rgb(0, 0, 255);
+    }
+    /* Pseudo-classes */
+    .learn:first-child {
+        color: rgb(145, 14, 33);
+    }
+   li:nth-child(2n+1) {
+        color: rgb(10, 165, 23);
+    }
+    h1::first-letter {
+        font-size: 200%;
+        color: rgb(255, 0, 0);
+    }

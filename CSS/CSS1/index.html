@@ -13,10 +13,10 @@
             margin: 20px;
         }
 
-        h1 {
+        /* h1 {
             text-align: center;
             margin-bottom: 20px;
-        }
+        } */
 
         h2 {
             color: darkblue;
@@ -38,12 +38,12 @@
             margin-left: 20px;
         }
     </style>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 
 </head>
 
 <body>
-    <h1 style="color: blueviolet; background-color: lightgray">
+    <h1 style="color: blueviolet; background-color: lightgray" align="center">
         CSS=Cascading Style Sheets
     </h1>
     <!-- inline CSS -->
@@ -76,12 +76,14 @@
             manage styles for multiple pages.
         </li>
     </ol>
-    <p>
-        By using CSS, you can create visually appealing and responsive designs for
-        your websites. It allows you to separate the content (HTML) from the
-        presentation (CSS), making it easier to maintain and update your web
-        pages.
-    </p>
+    <div>
+        <p>
+            By using CSS, you can create visually appealing and responsive designs for
+            your websites. It allows you to separate the content (HTML) from the
+            presentation (CSS), making it easier to maintain and update your web
+            pages.
+        </p>
+    </div>
     <h2>Understanding CSS Syntax</h2>
     <p>
         CSS syntax consists of selectors and declarations. A selector targets the
@@ -105,41 +107,50 @@
         type, class, ID, or other attributes. Some common selectors include:
     </p>
     <ul>
-        <li>
+        <li class="selector">
             <b>Element Selector:</b> Targets all instances of a specific HTML
             element. For example, <code>p</code> targets all paragraphs.
         </li>
-        <li>
+        <li class="selector">
             <b>Class Selector:</b> Targets elements with a specific class attribute.
             For example, <code>.my-class</code> targets all elements with the class
             "my-class".
         </li>
-        <li>
+        <li class="selector">
             <b>ID Selector:</b> Targets a single element with a specific ID
             attribute. For example, <code>#my-id</code> targets the element with the
             ID "my-id".
         </li>
-        <li>
+        <li class="selector">
             <b>Attribute Selector:</b> Targets elements based on their attributes.
             For example, <code>[type="text"]</code> targets all input elements with
             the type "text".
         </li>
+        <li class="selector class">
+            <b>Universal Selector :</b> Targets all elements on the page. For example, <code>*</code> targets all
+            elements.
+        </li>
     </ul>
-    <h2>Internal CSS</h2>
-    <p>
-        Internal CSS allows you to define styles within the
-        <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of
-        your HTML document. This is useful for applying styles to a single page
-        without creating a separate CSS file.
-        <div>
-    <h3>SYNTAX</h3>
-    <code>&lt;head&gt;</code> <br />
-    <code>&lt;style&gt;</code> <br />
-    <code> p { color: blue; } </code> <br />
-    <code>&lt;/style&gt;</code> <br />
-    <code>&lt;/head&gt;</code> <br />
-     </div>
-    </p>
+    <h2 id="internalCSS">Internal CSS</h2>
+    <div>
+        <section>
+            <p>
+                Internal CSS allows you to define styles within the
+                <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of
+                your HTML document. This is useful for applying styles to a single page
+                without creating a separate CSS file.
+            </p>
+        </section>
+    </div>
+    <div>
+        <h3>SYNTAX</h3>
+        <code>&lt;head&gt;</code> <br />
+        <code>&lt;style&gt;</code> <br />
+        <code> p { color: blue; } </code> <br />
+        <code>&lt;/style&gt;</code> <br />
+        <code>&lt;/head&gt;</code> <br />
+    </div>
+
     <h2>External CSS</h2>
     <p>
         External CSS allows you to define styles in a separate .css file and link
@@ -149,23 +160,112 @@
     </p>
     <div>
         <h3>EXTERNAL CSS FILE LINKING</h3>
-        <p>
+
         <h4>SYNTAX</h4>
-        <code>&lt;head&gt;</code> <br />
-        <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> <br />
-        <code>&lt;/head&gt;</code> <br /> <br>
-        <code>&lt;head&gt;</code> is the section of the HTML document where you
-        can include metadata, links to external resources, and other information
-        about the document. <br />
-        <code>&lt;link&gt;</code> is an HTML element used to link external
-        resources, such as stylesheets or scripts, to the HTML document. <br />
-        <code>&lt;link&gt;</code> connects an external resource to the HTML
-        document. <br />
-        <code>rel="stylesheet"</code> tells the browser that the resource is a
-        stylesheet. <br />
-        <code>href="style.css"</code> tells the browser which CSS file to load.
+        <p>
+            <code>&lt;head&gt;</code> <br />
+            <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> <br />
+            <code>&lt;/head&gt;</code> <br /> <br>
+            <code>&lt;head&gt;</code> is the section of the HTML document where you
+            can include metadata, links to external resources, and other information
+            about the document. <br />
+            <code>&lt;link&gt;</code> is an HTML element used to link external
+            resources, such as stylesheets or scripts, to the HTML document. <br />
+            <code>&lt;link&gt;</code> connects an external resource to the HTML
+            document. <br />
+            <code>rel="stylesheet"</code> tells the browser that the resource is a
+            stylesheet. <br />
+            <code>href="style.css"</code> tells the browser which CSS file to load.
         </p>
     </div>
+    <div>
+        <h2>CSS Specificity</h2>
+        <section>
+            <h3>What is Specificity?</h3>
+            <p>
+                Specificity is a concept in CSS that determines which styles are applied to an element when multiple
+                rules target the same element. It is based on the types of selectors used in the CSS rules. The more
+                specific a selector is, the higher its specificity value, and it will take precedence over less specific
+                selectors.
+                <b>Inline styles have the highest specificity, followed by ID selectors, class selectors, element
+                    selectors and universal selectors </b>. When multiple rules have the same specificity, the rule that
+                appears last in the CSS will be applied.
+            </p>
+    </div>
+    <div>
+        <h3>SPECIFICITY CALCULATION</h3>
+        <p>
+            Specificity is calculated based on the types of selectors used in a CSS rule. The specificity value is
+            represented as a four-part number (a, b, c, d), where:
+        </p>
+        <ul>
+            <li>a = Inline styles (1 if present, 0 if not)</li>
+            <li>b = Number of ID selectors</li>
+            <li>c = Number of class selectors, attributes selectors, and pseudo-classes</li>
+            <li>d = Number of element selectors and pseudo-elements</li>
+        </ul>
+        <h2>CSS Inheritance</h2>
+        <p>
+            Inheritance is a feature in CSS where child elements inherit certain properties from their parent elements.
+            Not all properties are inherited, but many text-related properties like color, font-size, and font-family
+            are inherited by default.
+        </p>
+        <h2>CSS Pseudo-classes</h2>
+        <p>
+            Pseudo-classes are used to define the special state of an element. For example, you can use the
+            <code>:hover</code> pseudo-class to change the style of a button when a user hovers over it with their
+            mouse. 
+            different pseudo-classes include <code>:focus</code>, <code>:active</code>, and <code>:visited</code>.
+        </p>
+        <p>
+            Some common pseudo-classes include:
+            <code>:hover</code>, <code>:focus</code>, <code>:active</code>, and <code>:visited</code>
+        </p>
+        <h2>CSS Pseudo-elements</h2>
+        <p>
+            Pseudo-elements are used to style specific parts of an element. For example, you can use the
+            <code>::first-line</code> pseudo-element to style the first line of a paragraph.
+            different pseudo-elements include <code>::before</code>, <code>::after</code>, <code>::first-letter</code>,
+            and <code>::selection</code>
+        </p>
+        <h2>CSS Media Queries</h2>
+        <p>
+            Media queries are used in responsive web design to apply different styles based on the device's
+            characteristics, such as screen width, height, or orientation. This allows you to create designs that adapt
+            to various screen sizes and devices.
+        </p>
+        <h2>Combinators</h2>
+        <p>
+            Combinators are used to define relationships between selectors. There are four main combinators in CSS:
+        </p>
+        <ul>
+            <li><b>Descendant Combinator</b>: Selects elements that are descendants of a specified element.</li>
+            <li><b>Child Combinator</b>: Selects elements that are direct children of a specified element.</li>
+            <li><b>Adjacent Sibling Combinator</b>: Selects elements that are immediately preceded by another element.
+            </li>
+            <li><b>General Sibling Combinator</b>: Selects elements that are siblings of a specified element.</li>
+        </ul>
+    </div>
+    <a href="https://www.w3schools.com/css/default.asp" target="_blank">Click here to learn more about CSS</a>
+    <P>Note: The content provided here is a brief overview of CSS concepts. For a more in-depth understanding, please
+        refer to the official documentation and tutorials. </p>
+    <p>W3 Schools</p>
+    <p>Web development</p>
+    <p>CSS is a powerful tool for web developers to create visually appealing and responsive websites. By understanding
+        the various aspects of CSS, including syntax, selectors, specificity, inheritance, pseudo-classes,
+        pseudo-elements, media queries, and combinators, developers can effectively style their web pages and enhance
+        the user experience.</p>
+        <h6>HOVER </h6>
+    <p>Hover over the text below to see the effect:</p>
+    <p class="hover-effect">This text will change color when you hover over it.</p>
+    <p>Hover over the button below to see the effect:</p>
+    <button class="hover-effect">Hover over me!</button>
+    <ul class="learn">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        </ul>
 </body>
+
 
 </html>

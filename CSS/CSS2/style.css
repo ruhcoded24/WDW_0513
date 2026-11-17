@@ -1,0 +1,40 @@
+h1{
+    font-family: 'Arial', sans-serif;
+}
+
+.redaction-50-regular {
+  font-family: "Redaction 50", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-50-bold {
+  font-family: "Redaction 50", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-50-regular-italic {
+  font-family: "Redaction 50", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+#lilu {
+    font-size: 100px;
+    font-family: "Redaction 50", serif;
+}
+#Anjali {
+   font-size: 50px;
+   font-weight: bolder;
+   font-style: italic;
+   font-variant: small-caps;
+  
+}
+#lorem {
+line-height: 6;
+letter-spacing: 3px;
+word-spacing: 10px;
+}
+#ruhvansh {
+  letter-spacing: -6px;
+}
